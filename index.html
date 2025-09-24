@@ -3,19 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DexterSense</title>
-  <style>
-    body{font-family:system-ui,Arial,sans-serif;margin:0;min-height:100vh;display:grid;place-items:center}
-    .card{max-width:720px;padding:2rem;border:1px solid #e5e7eb;border-radius:16px}
-    h1{margin:0 0 .5rem}
-    p{margin:.25rem 0}
-  </style>
+  <title>DexterSense — Train your humanoid robot immediately</title>
+  <meta name="description" content="DexterSense Capture Kit (glove + glasses) and pretrained hand-motion datasets to train humanoid robots faster." />
+  <meta property="og:title" content="DexterSense — Train your humanoid robot immediately" />
+  <meta property="og:description" content="Pretrained hand-motion datasets + Capture Kit (glove + glasses). IMU + egocentric video = reliable manipulation data." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.svg">
 </head>
 <body>
-  <main class="card">
-    <h1>DexterSense</h1>
-    <p>Glove + glasses kit for synchronized hand-motion datasets.</p>
-    <p>Contact: hello@dextersense.ai</p>
-  </main>
-</body>
-</html>
+  <!-- Top ribbon (share reminder) -->
+  <div class="ribbon">🚀 Share webpage on <strong>Friday</strong></div>
+
+  <!-- Nav -->
+  <header class="nav">
+    <a class="brand" href="#">
+      <span class="logo">🧤👓</span>
+      <span>DexterSense</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#demo">Demo</a>
+      <a href="#feedback">Feedback</a>
+      <a class="btn ghost" href="#cta">Get dataset</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1 class="reveal">Train your humanoid robot <span class="accent">immediately</span></h1>
+        <p class="lead reveal delay-1">
+          <strong>Dexter Sense</strong> = pretrained hand-motion datasets + Capture Kit 
+          (<em>glove + glasses</em>) for synchronized <b>IMU + egocentric video</b>.
+        </p>
+        <div class="hero-ctas reveal delay-2">
+          <a class="btn" href="#cta">Get a sample dataset</a>
+          <a class="btn ghost" href="#how">See how it works</a>
+        </div>
+        <ul class="hero-points reveal delay-3">
+          <li>Auto-annotations (21 landmarks) synced with IMU</li>
+          <li>Reduced drift & occlusions via fusion</li>
+          <li>Export: CSV/Parquet + MP4</li>
+        </ul>
+      </div>
+      <div class="hero-card reveal delay-2">
+        <div class="card glass">
