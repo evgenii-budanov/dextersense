@@ -1,147 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DexterSense – From Human Motion to Robot Skill</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DexterSense — From Human Motion to Robot Skill</title>
+  <meta name="description" content="DexterSense: Capture Kit (glove + glasses) and IL-ready datasets — the fastest way from human demonstrations to robot skills." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DexterSense — From Human Motion to Robot Skill" />
+  <meta property="og:description" content="Wearable kit + IL-ready datasets. From demos → robot skills, in days not weeks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og.jpg" />
+
+  <!-- Favicon / Fonts / CSS -->
+  <link rel="icon" href="assets/DS_logo.svg">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  
   <!-- Navigation -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <a href="#top" class="logo-link">
-        <img src="DS_logo_b.svg" alt="DexterSense Logo" class="logo" />
-      </a>
-      <nav class="nav-links">
-        <!-- Navigation links (if any) -->
-        <a href="#contact" class="nav-cta">Book a Pilot</a>
-      </nav>
-    </div>
+  <header class="nav">
+    <a class="brand" href="#">
+      <img class="logo-img" src="assets/DS_logo.svg" alt="DexterSense logo">
+      <span>DexterSense</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#value">Value</a>
+      <a href="#solution">Solution</a>
+      <a href="#demo">Demo</a>
+      <a href="#proof">Proof</a>
+      <a class="btn ghost" href="#cta">Get started</a>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="top">
-    <div class="container">
-      <h1 class="hero-title">From Human Motion to Robot Skill</h1>
-      <p class="hero-subtitle">The fastest path from human demonstrations to robot skills.</p>
-      <div class="hero-cta">
-        <a href="#next-steps" class="btn primary-btn">Book a Pilot</a>
-        <a href="#next-steps" class="btn secondary-btn">Request a Live Demo</a>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-copy">
+      <h1 class="title reveal">From Human Motion <br><span class="accent">to Robot Skill</span></h1>
+      <p class="lead reveal delay-1">We provide the data that teaches humanoid robots hands.  
+      Turn demonstrations into dexterity — <b>the fastest path from human demos to robot skills.</b></p>
+      <div class="hero-ctas reveal delay-2">
+        <a class="btn" href="#cta">Book a Pilot</a>
+        <a class="btn ghost" href="#demo">Watch Demo</a>
       </div>
     </div>
   </section>
 
-  <!-- Value Proposition Section -->
-  <section class="value-prop">
+  <!-- Value -->
+  <section id="value" class="section alt">
     <div class="container">
-      <h2 class="section-title">What We Deliver</h2>
-      <ul class="value-list">
-        <li><strong>Synced &ldquo;hand + scene&rdquo; capture</strong> &ndash; wearable glove + camera, plug-and-play, field‑ready.</li>
-        <li><strong>IL‑ready datasets</strong> &ndash; auto-calibration, time sync, sensor fusion, joint angles + video, direct export to BC/RL pipelines.</li>
-        <li><strong>Faster iteration</strong> &ndash; from idea to first validated dataset in days instead of weeks.</li>
-        <li><strong>Better dexterity</strong> &ndash; demos-to-skills pipeline that measurably improves grasp reliability vs IMU‑only / video‑only approaches.</li>
-        <li><strong>Data ownership &amp; fit</strong> &ndash; you control protocol, format, and IP; data tailored to your tasks.</li>
-      </ul>
-    </div>
-  </section>
+      <h2 class="section-title reveal">Our Promise</h2>
+      <p class="lead reveal delay-1">Morning capture, evening grasp improvement.  
+      IL-ready datasets that cut weeks into days.</p>
 
-  <!-- How It Works Section -->
-  <section class="how-it-works">
-    <div class="container">
-      <h2 class="section-title">How It Works</h2>
-      <div class="steps">
-        <div class="step">
-          <h3 class="step-title">1. Capture</h3>
-          <p class="step-desc">Put on the DexterSense glove and glasses, run quick auto-calibration (≈2 min), and record human demos with on-screen event markers.</p>
-        </div>
-        <div class="step">
-          <h3 class="step-title">2. Generate Dataset</h3>
-          <p class="step-desc">Our system fuses the glove’s joint angles with video from the glasses to produce a synchronized &ldquo;hand + scene&rdquo; dataset. Review and export the data in a standard format, ready for imitation learning.</p>
-        </div>
-        <div class="step">
-          <h3 class="step-title">3. Train &amp; Validate</h3>
-          <p class="step-desc">Plug the dataset into your behavior cloning or reinforcement learning pipeline. Quickly train and evaluate your robot’s grasping skills, with measurable improvements over baseline data.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Results/Benefits Section -->
-  <section class="benefits">
-    <div class="container">
-      <h2 class="section-title">The Impact</h2>
-      <div class="benefit-list">
-        <div class="benefit">
+      <div class="grid-3">
+        <div class="card reveal">
           <h3>Speed</h3>
-          <p>Go from idea to first dataset in days, not weeks.</p>
+          <p>From idea to first validated dataset in days, not weeks.</p>
         </div>
-        <div class="benefit">
-          <h3>Dexterity</h3>
-          <p>Achieve higher grasp success rates vs conventional training data.</p>
+        <div class="card reveal delay-1">
+          <h3>Quality</h3>
+          <p>Frame-accurate “hand + scene” sync → better training.</p>
         </div>
-        <div class="benefit">
-          <h3>Efficiency</h3>
-          <p>Reduce reshoots and data collection effort with live feedback.</p>
-        </div>
-        <div class="benefit">
-          <h3>Portability</h3>
-          <p>Capture demonstrations anywhere &mdash; no motion-capture studio needed.</p>
+        <div class="card reveal delay-2">
+          <h3>Control</h3>
+          <p>Your protocol, your format, your IP.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action / Next Steps Section -->
-  <section class="next-steps" id="next-steps">
+  <!-- Solution -->
+  <section id="solution" class="section">
     <div class="container">
-      <h2 class="section-title">Get Started with DexterSense</h2>
-      <div class="actions">
-        <div class="action-card">
-          <h3>Book a Pilot</h3>
-          <p>Engage in a 2-week pilot: we help capture your data, integrate with your pipeline, and validate improved grasps.</p>
-          <a href="#contact" class="btn card-btn">Book a Pilot</a>
+      <h2 class="section-title reveal">Our Solution</h2>
+      <p class="lead reveal delay-1">Wearable glove + glasses → synchronized capture → fusion (angles + video) → one-click IL export.</p>
+      
+      <div class="pillars reveal">
+        <div class="pillar">
+          <h4>Secret Sauce</h4>
+          <ul>
+            <li>Frame-accurate sync</li>
+            <li>Robust IMU fusion</li>
+            <li>Standardized schema</li>
+          </ul>
         </div>
-        <div class="action-card">
-          <h3>Request a Live Demo</h3>
-          <p>Schedule a 30-minute Zoom walkthrough. We’ll demo a dataset and show you how DexterSense works first-hand.</p>
-          <a href="#contact" class="btn card-btn">Request Demo</a>
+        <div class="pillar">
+          <h4>Wow</h4>
+          <ul>
+            <li>Morning capture → evening grasp gains</li>
+            <li>Better dexterity vs IMU-only / video-only</li>
+          </ul>
         </div>
-        <div class="action-card">
-          <h3>Join the Beta</h3>
-          <p>Become a tester and get early access to the DexterSense hardware and software. Help shape our development.</p>
-          <a href="#contact" class="btn card-btn">Join the Beta</a>
-        </div>
-        <div class="action-card">
-          <h3>Pre-order the Capture Kit</h3>
-          <p>Secure your slot in the first batch of DexterSense kits. Be among the first to deploy human-to-robot skill transfer in the field.</p>
-          <a href="#contact" class="btn card-btn">Pre-order Now</a>
+        <div class="pillar">
+          <h4>Garden Gnome Magic</h4>
+          <ul>
+            <li>Auto-calibration in minutes</li>
+            <li>Semantic markers (start/contact/release)</li>
+            <li>Live QA to cut reshoots</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials / Expert Insights Section -->
-  <section class="testimonials">
+  <!-- Demo -->
+  <section id="demo" class="section alt">
     <div class="container">
-      <h2 class="section-title">What Experts Say</h2>
-      <div class="testimonial">
-        <p class="quote">&ldquo;The GPT-moment of robotics is approaching. Unlike LLMs, which learn from vast text datasets, robots need high-quality, precise data that must be collected manually. If this labor-intensive process could be outsourced efficiently, it could enable scalable AI training and allow companies to focus on embodiment and AI development.&rdquo;</p>
-        <p class="author">– Aleksandr Kashirin, BizDev at Sber Robotics Center</p>
+      <h2 class="section-title reveal">See it in Action</h2>
+      <p class="lead reveal delay-1">Capture Kit in the field. Plug-and-play IL-ready datasets.</p>
+      <div class="demo-wrap reveal delay-2">
+        <video class="demo-video" controls poster="assets/demo-poster.jpg">
+          <source src="assets/demo.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div class="testimonial">
-        <p class="quote">&ldquo;Today, Imitation Learning is one of the dominating paradigms in robot learning, since it enables a reasonable way to tackle the sim-to-real gap. Dexterous manipulation for palm-like manipulators, to the best of my knowledge, still remains almost uncovered by Imitation Learning datasets, relying mostly on Reinforcement Learning in simulation environments, known for their challenging sim-to-real transfer. I found the proposed project cheap and efficient way for collecting datasets for Imitation Learning, which also has a good research potential.&rdquo;</p>
-        <p class="author">– Timur Akhtyamov, Mobile Robotics Lab, Skoltech</p>
+
+      <div class="demo-wrap reveal delay-3">
+        <video class="demo-video" controls poster="assets/demo-poster.jpg">
+          <source src="assets/video_SG_processed.mp4" type="video/mp4" />
+        </video>
       </div>
+    </div>
+  </section>
+
+  <!-- Proof / Testimonials -->
+  <section id="proof" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Expert Insight</h2>
+      <div class="quotes">
+        <figure class="quote reveal">
+          <blockquote>“The GPT-moment of robotics is approaching... If dataset collection can be outsourced efficiently, it will enable scalable AI training.”</blockquote>
+          <figcaption>Aleksandr Kashirin, Sber Robotics Center</figcaption>
+        </figure>
+        <figure class="quote reveal delay-1">
+          <blockquote>“Dexterous manipulation still lacks datasets. This project is a cheap and efficient way to collect IL-ready data.”</blockquote>
+          <figcaption>Timur Akhtyamov, Mobile Robotics Lab, Skoltech</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="section alt">
+    <div class="container">
+      <h2 class="section-title reveal">Get Started Today</h2>
+      <p class="lead reveal delay-1">Book a Pilot • Request a Live Demo • Join the Beta • Pre-order the Capture Kit</p>
+      <form class="lead-form reveal delay-2" action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="email" name="email" placeholder="Work email" required />
+        <button class="btn" type="submit">Request Info</button>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer" id="contact">
-    <div class="container">
-      <p class="footer-text">&copy; 2025 DexterSense. All rights reserved.</p>
-      <!-- Contact information or social links could be added here -->
+  <footer class="footer">
+    <div class="container foot-grid">
+      <div>
+        <div class="brand foot"><img class="logo-img" src="assets/DS_logo.svg" alt="">DexterSense</div>
+        <p class="tiny">From human motion to robot skill. Capture Kit + IL-ready datasets.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#value">Value</a>
+        <a href="#solution">Solution</a>
+        <a href="#demo">Demo</a>
+        <a href="#proof">Proof</a>
+        <a href="#cta">Contact</a>
+      </div>
     </div>
+    <div class="copy tiny">© <span id="year"></span> DexterSense</div>
   </footer>
+
+  <script>
+    const R = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); R.unobserve(e.target); }
+      })
+    },{threshold:.2});
+    document.querySelectorAll('.reveal').forEach(el=>R.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
