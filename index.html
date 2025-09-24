@@ -1,24 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Base meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DexterSense — Train your humanoid robot immediately</title>
   <meta name="description" content="DexterSense Capture Kit (glove + glasses) and pretrained hand-motion datasets to train humanoid robots faster." />
+
+  <!-- Open Graph / Social -->
   <meta property="og:title" content="DexterSense — Train your humanoid robot immediately" />
   <meta property="og:description" content="Pretrained hand-motion datasets + Capture Kit (glove + glasses). IMU + egocentric video = reliable manipulation data." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:url" content="https://yourdomain-or-ghpages-url" />
+
+  <!-- Icons / Fonts / CSS -->
+  <link rel="icon" href="assets/DS_logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/DS_logo.svg">
 </head>
 <body>
-  
+
+  <!-- Share reminder ribbon -->
+  <div class="ribbon">🚀 Share webpage on <strong>Friday</strong></div>
+
   <!-- Nav -->
-  <header class="nav">
-    <a class="brand" href="#">
+  <header class="nav" role="navigation" aria-label="Main">
+    <a class="brand" href="#top" aria-label="DexterSense home">
       <img class="logo-img" src="assets/DS_logo.svg" alt="DexterSense logo">
       <span>DexterSense</span>
     </a>
@@ -31,11 +40,11 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1 class="reveal">Train your humanoid robot <span class="accent">immediately</span></h1>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-copy">
+        <h1 id="hero-title" class="reveal">Train your humanoid robot <span class="accent">immediately</span></h1>
         <p class="lead reveal delay-1">
           <strong>Dexter Sense</strong> = pretrained hand-motion datasets + Capture Kit 
           (<em>glove + glasses</em>) for synchronized <b>IMU + egocentric video</b>.
@@ -50,168 +59,169 @@
           <li>Export: CSV/Parquet + MP4</li>
         </ul>
       </div>
-      <div class="hero-card reveal delay-2">
-        <div class="card glass">
-          <h3>Capture Kit</h3>
-          <p>Wearable glove (6× IMU) + glasses camera with head-IMU. Wi-Fi, time-sync, SDK.</p>
-          <div class="specs">
-            <div><span>200 Hz</span> IMU</div>
-            <div><span>30 fps</span> video</div>
-            <div><span>&plusmn;5–10 ms</span> sync</div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="section" aria-labelledby="how-title">
+      <div class="container">
+        <div class="eyebrow">How? Our pretrained datasets</div>
+        <h2 id="how-title" class="section-title reveal">From <em>capture</em> to <em>ready-to-train</em> in minutes</h2>
+
+        <div class="grid-3">
+          <article class="card reveal">
+            <h3>1) Capture</h3>
+            <p>Glove + glasses record IMU and egocentric video with sub-frame sync.</p>
+          </article>
+          <article class="card reveal delay-1">
+            <h3>2) Auto-label</h3>
+            <p>MediaPipe skeleton + fusion → clean finger trajectories and scene context.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <h3>3) Export</h3>
+            <p>Dataset bundle: <b>CSV/Parquet</b> + <b>MP4</b> + metadata for immediate training.</p>
+          </article>
+        </div>
+
+        <div class="pillars reveal">
+          <div class="pillar">
+            <h4>Why buy?</h4>
+            <ul>
+              <li>Skip months of data collection</li>
+              <li>Benchmark-quality teleop demos</li>
+              <li>Consistent annotations & timestamps</li>
+            </ul>
           </div>
-          <img class="mock" src="assets/mock-capture.png" alt="DexterSense Capture Kit mockup">
+          <div class="pillar">
+            <h4>Who buys?</h4>
+            <ul>
+              <li>Humanoid labs & R&D teams</li>
+              <li>Factory pilots & system integrators</li>
+              <li>Academic groups needing baselines</li>
+            </ul>
+          </div>
+          <div class="pillar">
+            <h4>What you get</h4>
+            <ul>
+              <li>Pretrained dataset packs</li>
+              <li>Capture Kit (subscription)</li>
+              <li>SDK & quick-start notebooks</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- How (Tilda Publishing -> Dexter Sense mapping) -->
-  <section id="how" class="section">
-    <div class="container">
-      <div class="eyebrow">How? Our pretrained datasets</div>
-      <h2 class="section-title reveal">From <em>capture</em> to <em>ready-to-train</em> in minutes</h2>
+    <!-- Demo 1: Capture Kit -->
+    <section id="demo" class="section alt" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="eyebrow">Include demo video</div>
+        <h2 id="demo-title" class="section-title reveal">See the Capture Kit & datasets in action</h2>
 
-      <div class="grid-3">
-        <div class="card reveal">
-          <h3>1) Capture</h3>
-          <p>Glove + glasses record IMU and egocentric video with sub-frame sync.</p>
-        </div>
-        <div class="card reveal delay-1">
-          <h3>2) Auto-label</h3>
-          <p>MediaPipe skeleton + fusion → clean finger trajectories and scene context.</p>
-        </div>
-        <div class="card reveal delay-2">
-          <h3>3) Export</h3>
-          <p>Dataset bundle: <b>CSV/Parquet</b> + <b>MP4</b> + metadata for immediate training.</p>
-        </div>
-      </div>
+        <div class="grid-3">
+          <article class="card reveal delay-1">
+            <h3>Capture Kit</h3>
+            <p>Wearable glove (6× IMU) + glasses camera with head-IMU. Wi-Fi, time-sync, SDK.</p>
+            <div class="specs">
+              <div><span>200 Hz</span> IMU</div>
+              <div><span>30 fps</span> video</div>
+              <div><span>&plusmn;5–10 ms</span> sync</div>
+            </div>
+            <img class="mock" src="assets/mock-capture.png" alt="DexterSense Capture Kit mockup">
+          </article>
 
-      <div class="pillars reveal">
-        <div class="pillar">
-          <h4>Why buy?</h4>
-          <ul>
-            <li>Skip months of data collection</li>
-            <li>Benchmark-quality teleop demos</li>
-            <li>Consistent annotations & timestamps</li>
-          </ul>
+          <div class="card reveal delay-1" style="grid-column: span 2;">
+            <div class="demo-wrap">
+              <video class="demo-video" controls poster="assets/demo-poster.jpg" aria-label="Capture Kit demo video">
+                <source src="assets/demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
         </div>
-        <div class="pillar">
-          <h4>Who buys?</h4>
-          <ul>
-            <li>Humanoid labs & R&D teams</li>
-            <li>Factory pilots & system integrators</li>
-            <li>Academic groups needing baselines</li>
-          </ul>
-        </div>
-        <div class="pillar">
-          <h4>What you get</h4>
-          <ul>
-            <li>Pretrained dataset packs</li>
-            <li>Capture Kit (subscription)</li>
-            <li>SDK & quick-start notebooks</li>
-          </ul>
+
+        <div class="hero-ctas reveal delay-2" style="justify-content:center;">
+          <a class="btn" href="#cta">Request sample dataset</a>
+          <a class="btn ghost" href="#feedback">Read client feedback</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Demo -->
-  <section id="demo" class="section alt">
-    <div class="container">
-      <div class="eyebrow">Include demo video</div>
-      <h2 class="section-title reveal">See the Capture Kit & datasets in action</h2>
+    <!-- Demo 2: Computer Vision processed -->
+    <section id="demo2" class="section" aria-labelledby="demo2-title">
+      <div class="container">
+        <div class="eyebrow">Computer Vision Demo</div>
+        <h2 id="demo2-title" class="section-title reveal">Vision-based motion tracking</h2>
+        <p class="lead reveal delay-1">Our glasses camera detects and processes motion in real-time. Example: MediaPipe-based hand skeletonization.</p>
 
-      <div class="demo-wrap reveal delay-1">
-        <!-- Option A: self-hosted MP4 in /assets/demo.mp4 -->
-        <video class="demo-video" controls poster="assets/demo-poster.jpg">
-          <source src="assets/demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
-        <!-- Option B: uncomment to embed YouTube
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="DexterSense demo" frameborder="0" allowfullscreen></iframe>
+        <div class="demo-wrap card reveal delay-2" style="padding:0;">
+          <video class="demo-video" controls poster="assets/demo-poster.jpg" aria-label="Vision processed demo video">
+            <source src="assets/video_SG_processed.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-        -->
       </div>
+    </section>
 
-      <div class="cta-inline reveal delay-2">
-        <a class="btn" href="#cta">Request sample dataset</a>
-        <a class="btn ghost" href="#feedback">Read client feedback</a>
+    <!-- Feedback -->
+    <section id="feedback" class="section" aria-labelledby="feedback-title">
+      <div class="container">
+        <div class="eyebrow">Include feedback from clients</div>
+        <h2 id="feedback-title" class="section-title reveal">What early users say</h2>
+
+        <div class="quotes">
+          <figure class="quote reveal">
+            <blockquote>
+              “The IMU+video fusion reduced our failure cases in grasping experiments —
+              the synchronized timestamps saved us weeks.”
+            </blockquote>
+            <figcaption>Research Lab, Europe</figcaption>
+          </figure>
+
+          <figure class="quote reveal delay-1">
+            <blockquote>
+              “We plugged the exported CSV/MP4 bundle into our training pipeline in one day.
+              Calibration & export are refreshingly simple.”
+            </blockquote>
+            <figcaption>Robotics Startup, North America</figcaption>
+          </figure>
+
+          <figure class="quote reveal delay-2">
+            <blockquote>
+              “For pilot lines, we needed reliable hand trajectories fast.
+              DexterSense datasets gave us usable demos without a mocap studio.”
+            </blockquote>
+            <figcaption>Industrial Integrator, GCC</figcaption>
+          </figure>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Second demo -->
-<section id="demo2" class="section">
-  <div class="container">
-    <div class="eyebrow">Computer Vision Demo</div>
-    <h2 class="section-title reveal">Vision-based motion tracking</h2>
-    <p class="lead reveal delay-1">Our glasses camera detects and processes motion in real-time. The example below shows hand motion captured via MediaPipe-based skeletonization.</p>
+    <!-- CTA -->
+    <section id="cta" class="section alt" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title" class="section-title reveal">Get a sample. Book a demo.</h2>
+        <p class="lead reveal delay-1">Tell us your task (pick &amp; place, tool use, assembly) — we’ll match a pretrained pack or capture custom data.</p>
 
-    <div class="demo-wrap reveal delay-2">
-      <video class="demo-video" controls poster="assets/demo-poster.jpg">
-        <source src="assets/video_SG_processed.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</section>
-
-  <!-- Feedback -->
-  <section id="feedback" class="section">
-    <div class="container">
-      <div class="eyebrow">Include feedback from clients</div>
-      <h2 class="section-title reveal">What early users say</h2>
-
-      <div class="quotes">
-        <figure class="quote reveal">
-          <blockquote>
-            “The IMU+video fusion reduced our failure cases in grasping experiments —
-            the synchronized timestamps saved us weeks.”
-          </blockquote>
-          <figcaption>Research Lab, Europe</figcaption>
-        </figure>
-
-        <figure class="quote reveal delay-1">
-          <blockquote>
-            “We plugged the exported CSV/MP4 bundle into our training pipeline in one day.
-            Calibration & export are refreshingly simple.”
-          </blockquote>
-          <figcaption>Robotics Startup, North America</figcaption>
-        </figure>
-
-        <figure class="quote reveal delay-2">
-          <blockquote>
-            “For pilot lines, we needed reliable hand trajectories fast.
-            DexterSense datasets gave us usable demos without a mocap studio.”
-          </blockquote>
-          <figcaption>Industrial Integrator, GCC</figcaption>
-        </figure>
+        <!-- Replace action URL with your Formspree / handler -->
+        <form class="lead-form reveal delay-2" action="https://formspree.io/f/your-form-id" method="POST">
+          <input type="email" name="email" placeholder="Work email" required aria-label="Your work email" />
+          <input type="text" name="usecase" placeholder="Use case (e.g., grasping, screwing, wiring)" aria-label="Your use case" />
+          <button class="btn" type="submit">Request sample</button>
+        </form>
+        <p class="tiny">No spam. We reply within 1–2 business days.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="cta" class="section alt">
-    <div class="container">
-      <h2 class="section-title reveal">Get a sample. Book a demo.</h2>
-      <p class="lead reveal delay-1">Tell us your task (pick & place, tool use, assembly) — we’ll match a pretrained pack or capture custom data.</p>
-      <form class="lead-form reveal delay-2" action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="email" name="email" placeholder="Work email" required />
-        <input type="text" name="usecase" placeholder="Use case (e.g., grasping, screwing, wiring)" />
-        <button class="btn" type="submit">Request sample</button>
-      </form>
-      <p class="tiny">No spam. We reply within 1–2 business days.</p>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container foot-grid">
       <div>
-        <div class="brand foot"><img class="logo-img" src="assets/DS_logo.svg" alt="DexterSense logo">
-        <p class="tiny">Glove + glasses Capture Kit & pretrained hand-motion datasets.</p>
+        <div class="brand foot">
+          <img class="logo-img" src="assets/DS_logo.svg" alt="" aria-hidden="true">
+          DexterSense
+        </div>
+        <p class="tiny">Glove + glasses Capture Kit &amp; pretrained hand-motion datasets.</p>
       </div>
       <div class="foot-links">
         <a href="#how">How it works</a>
@@ -223,12 +233,13 @@
     <div class="copy tiny">© <span id="year"></span> DexterSense. All rights reserved.</div>
   </footer>
 
+  <!-- Minimal JS -->
   <script>
     // IntersectionObserver for reveal-on-scroll
     const R = new IntersectionObserver(entries=>{
       entries.forEach(e=>{
         if(e.isIntersecting){ e.target.classList.add('in'); R.unobserve(e.target); }
-      })
+      });
     },{threshold:.2});
     document.querySelectorAll('.reveal').forEach(el=>R.observe(el));
 
