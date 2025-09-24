@@ -54,3 +54,172 @@
       </div>
       <div class="hero-card reveal delay-2">
         <div class="card glass">
+          <h3>Capture Kit</h3>
+          <p>Wearable glove (6× IMU) + glasses camera with head-IMU. Wi-Fi, time-sync, SDK.</p>
+          <div class="specs">
+            <div><span>200 Hz</span> IMU</div>
+            <div><span>30 fps</span> video</div>
+            <div><span>&plusmn;5–10 ms</span> sync</div>
+          </div>
+          <img class="mock" src="assets/mock-capture.png" alt="DexterSense Capture Kit mockup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How (Tilda Publishing -> Dexter Sense mapping) -->
+  <section id="how" class="section">
+    <div class="container">
+      <div class="eyebrow">How? Our pretrained datasets</div>
+      <h2 class="section-title reveal">From <em>capture</em> to <em>ready-to-train</em> in minutes</h2>
+
+      <div class="grid-3">
+        <div class="card reveal">
+          <h3>1) Capture</h3>
+          <p>Glove + glasses record IMU and egocentric video with sub-frame sync.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <h3>2) Auto-label</h3>
+          <p>MediaPipe skeleton + fusion → clean finger trajectories and scene context.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <h3>3) Export</h3>
+          <p>Dataset bundle: <b>CSV/Parquet</b> + <b>MP4</b> + metadata for immediate training.</p>
+        </div>
+      </div>
+
+      <div class="pillars reveal">
+        <div class="pillar">
+          <h4>Why buy?</h4>
+          <ul>
+            <li>Skip months of data collection</li>
+            <li>Benchmark-quality teleop demos</li>
+            <li>Consistent annotations & timestamps</li>
+          </ul>
+        </div>
+        <div class="pillar">
+          <h4>Who buys?</h4>
+          <ul>
+            <li>Humanoid labs & R&D teams</li>
+            <li>Factory pilots & system integrators</li>
+            <li>Academic groups needing baselines</li>
+          </ul>
+        </div>
+        <div class="pillar">
+          <h4>What you get</h4>
+          <ul>
+            <li>Pretrained dataset packs</li>
+            <li>Capture Kit (subscription)</li>
+            <li>SDK & quick-start notebooks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section id="demo" class="section alt">
+    <div class="container">
+      <div class="eyebrow">Include demo video</div>
+      <h2 class="section-title reveal">See the Capture Kit & datasets in action</h2>
+
+      <div class="demo-wrap reveal delay-1">
+        <!-- Option A: self-hosted MP4 in /assets/demo.mp4 -->
+        <video class="demo-video" controls poster="assets/demo-poster.jpg">
+          <source src="assets/demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Option B: uncomment to embed YouTube
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="DexterSense demo" frameborder="0" allowfullscreen></iframe>
+        </div>
+        -->
+      </div>
+
+      <div class="cta-inline reveal delay-2">
+        <a class="btn" href="#cta">Request sample dataset</a>
+        <a class="btn ghost" href="#feedback">Read client feedback</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback -->
+  <section id="feedback" class="section">
+    <div class="container">
+      <div class="eyebrow">Include feedback from clients</div>
+      <h2 class="section-title reveal">What early users say</h2>
+
+      <div class="quotes">
+        <figure class="quote reveal">
+          <blockquote>
+            “The IMU+video fusion reduced our failure cases in grasping experiments —
+            the synchronized timestamps saved us weeks.”
+          </blockquote>
+          <figcaption>Research Lab, Europe</figcaption>
+        </figure>
+
+        <figure class="quote reveal delay-1">
+          <blockquote>
+            “We plugged the exported CSV/MP4 bundle into our training pipeline in one day.
+            Calibration & export are refreshingly simple.”
+          </blockquote>
+          <figcaption>Robotics Startup, North America</figcaption>
+        </figure>
+
+        <figure class="quote reveal delay-2">
+          <blockquote>
+            “For pilot lines, we needed reliable hand trajectories fast.
+            DexterSense datasets gave us usable demos without a mocap studio.”
+          </blockquote>
+          <figcaption>Industrial Integrator, GCC</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="section alt">
+    <div class="container">
+      <h2 class="section-title reveal">Get a sample. Book a demo.</h2>
+      <p class="lead reveal delay-1">Tell us your task (pick & place, tool use, assembly) — we’ll match a pretrained pack or capture custom data.</p>
+      <form class="lead-form reveal delay-2" action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="email" name="email" placeholder="Work email" required />
+        <input type="text" name="usecase" placeholder="Use case (e.g., grasping, screwing, wiring)" />
+        <button class="btn" type="submit">Request sample</button>
+      </form>
+      <p class="tiny">No spam. We reply within 1–2 business days.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container foot-grid">
+      <div>
+        <div class="brand foot"><span class="logo">🧤👓</span>DexterSense</div>
+        <p class="tiny">Glove + glasses Capture Kit & pretrained hand-motion datasets.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#how">How it works</a>
+        <a href="#demo">Demo</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#cta">Contact</a>
+      </div>
+    </div>
+    <div class="copy tiny">© <span id="year"></span> DexterSense. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // IntersectionObserver for reveal-on-scroll
+    const R = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); R.unobserve(e.target); }
+      })
+    },{threshold:.2});
+    document.querySelectorAll('.reveal').forEach(el=>R.observe(el));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
